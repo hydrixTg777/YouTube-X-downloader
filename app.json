@@ -1,6 +1,6 @@
 {
-  "name": "HB YOUTUBE DL BOT",
-  "description": "HB YOUTUBE DOWNLOADER BOT",
+  "name": "YOUTUBE DL BOT",
+  "description": "YOUTUBE DOWNLOADER BOT",
 
   "keywords": [
     "YOUTUBE",
@@ -9,8 +9,8 @@
     "VIDEO"
  
   ],
-  "logo": "https://telegra.ph/file/e8a39b06fabbfac6bce8f.jpg",
-  "repository": "https://github.com/hbbots/YOUTUBE-BOT",
+  "logo": "https://telegra.ph/file/0a1accc00ca7ef550e212.jpg",
+  "repository": "https://github.com/Hydrayt777/YouTube-X-downloader",
   "env": {
     "WEBHOOK": {
       "description": "LEAVE IT",
