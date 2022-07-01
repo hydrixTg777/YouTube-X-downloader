@@ -4,7 +4,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client, filters,emoji
 from pyrogram.types import Message
 import progress
-from progress import progress_for_pyrogram,TimeFormatter,time,UPLOAD_START,humanbytes
+from helpers.progress import progress_for_pyrogram,TimeFormatter,time,UPLOAD_START,humanbytes
 
 
 HB = Client(
@@ -16,14 +16,14 @@ HB = Client(
 
 START_TEXT = """**
 HI {}, 
-I AM A YOUTUBE DOWNLOADER BOT
+i am a youtube X downloader bot
 
 MADE BY @TELSABOTS**"""
 
 HELP_TEXT = """**
-SENT ANY URL .......
+sent any url .......
 
-THEN SELECT AVAILABLE QUALITY
+then select available quality
 
 MADE BY @TELSABOTS**
 """
