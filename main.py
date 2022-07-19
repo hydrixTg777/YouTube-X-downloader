@@ -150,7 +150,7 @@ async def ytdl(_, message):
    chat_id =message.chat.id
    thumb = yt.thumbnail_url
 
-   ythigh = yt.streams.get_highest_resolution(resolution = '1080P')
+   ythigh = yt.streams.get_highest_resolution()
    ythd = yt.streams.get_by_resolution(resolution = '720p')
    ytmedium = yt.streams.get_by_resolution(resolution = '480p')
    ytlow = yt.streams.get_by_resolution(resolution ='360p')
