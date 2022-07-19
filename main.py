@@ -150,7 +150,7 @@ async def ytdl(_, message):
    chat_id =message.chat.id
    thumb = yt.thumbnail_url
 
-   ythigh = yt.streams.get_highest_resolution()
+   ythigh = yt.streams.get_highest_resolution(resolution = '1080P')
    ythd = yt.streams.get_by_resolution(resolution = '720p')
    ytmedium = yt.streams.get_by_resolution(resolution = '480p')
    ytlow = yt.streams.get_by_resolution(resolution ='360p')
@@ -159,7 +159,7 @@ async def ytdl(_, message):
    
    result_buttons2 = InlineKeyboardMarkup(
     [[
-        InlineKeyboardButton('🎬 1080P', callback_data='high'),
+        InlineKeyboardButton('🎬 1080P', callback_data='1080P'),
         InlineKeyboardButton('🎬 720p', callback_data='720p')
     ],[
         InlineKeyboardButton('🎬 480p', callback_data='480p'),
@@ -201,7 +201,8 @@ async def cb_data(bot, update):
             chat_id = update.message.chat.id,
             text="**😔 720P QUALITY IS NOT AVAILABLE\n CHOOSE ANY OTHER QUALITIES**")  
             
-             
+ 
+            
     elif update.data == '480p':
       try:
       
@@ -222,8 +223,10 @@ async def cb_data(bot, update):
         await HB.send_message(
             chat_id = update.message.chat.id,
             text="**😔 480P QUALITY IS NOT AVAILABLE \n CHOOSE ANY OTHER QUALITIES**")  
-    
-    elif update.data == 'high':
+   
+
+ 
+    elif update.data == '1080P':
      try:
         await  HB.send_video(
             chat_id = update.message.chat.id, 
@@ -242,6 +245,8 @@ async def cb_data(bot, update):
             chat_id = update.message.chat.id,
             text="**😔 1080P QUALITY IS NOT AVAILABLE\n CHOOSE ANY OTHER QUALITIES**")    
     
+
+
     elif update.data == '360p':
      try:
       await  HB.send_video(
@@ -262,6 +267,8 @@ async def cb_data(bot, update):
             chat_id = update.message.chat.id,
             text="**😔 360P QUALITY IS NOT AVAILABLE \n CHOOSE ANY OTHER QUALITIES**")  
     
+
+
     elif update.data == '240p':
      try:
 
@@ -284,6 +291,8 @@ async def cb_data(bot, update):
         chat_id = update.message.chat.id,
          text="**😔 240P QUALITY IS NOT AVAILABLE\n CHOOSE ANY OTHER QUALITIES**")    
 
+
+
     elif update.data == '144p':
      try:
         await  HB.send_video(
@@ -305,6 +314,8 @@ async def cb_data(bot, update):
             chat_id = update.message.chat.id,
             text="😔 144P QUALITY IS NOT AVAILABLE\n CHOOSE ANY OTHER QUALITIES**")
     
+
+
     elif update.data == "home":
         await update.message.edit_text(
             text=START_TEXT.format(update.from_user.mention),
